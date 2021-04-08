@@ -2,15 +2,18 @@
 
 Note: Todo here means tasks to be completed.
 
-## task 1
-1. Create a folder called DESIGN
-2. Export all the designs(not assets) from the figma url
-3. Move all exported designs to the DESIGN folder you created
-4. add the DESIGN to .gitignore file
-5. push the changes to github...
+## task 2
+In this task, we start creating our header component.
+steps:
+1. convert all assets to *.webm* go to https://convertio.co/png-webp/
+2. Interprete the figma design in html.
 
-### task-aim: just to make sure you learn how to work with git and git(as we'll be doing this alot).
-### Duration: 1 day
+##Note: the header component is a slider(meaning we'll have 4 heroes sliding in and out).
 
-## Task 2
-// on completion of first task task 2 will be updated.
+
+
+### task-aim: Create the header component and learn how to make a slider with only css.
+### Duration: 2 days
+### Note: you can use my code as a reference
+## Task 3
+// on completion of first task, task 3 will be updated.
