@@ -1,0 +1,326 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Cocon";
+  src: url("/assets/fonts/Cocon-Regular.eot");
+  src: url("/assets/fonts/Cocon-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Cocon-Regular.woff2") format("woff2"), url("/assets/fonts/Cocon-Regular.woff") format("woff"), url("/assets/fonts/Cocon-Regular.ttf") format("truetype"), url("/assets/fonts/Cocon-Regular.svg#Cocon-Regular") format("svg");
+  font-style: normal;
+  font-display: swap;
+}
+/**
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------*  #SHARED
+\*------------------------------------*/
+/**
+ * Shared declarations for certain elements.
+ */
+/**
+ * Always declare margins in the same direction:
+ * csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+/*------------------------------------*  #PAGE
+\*------------------------------------*/
+/**
+ * Page-level styling (e.g. HTML and BODY elements).
+ */
+:root {
+  --normal:400;
+  --semi:500;
+  --bold:600;
+  --font:"Cocon","Open Sans";
+  --font-size: 15px;
+  --pink: #FE96C6;
+  --blue: #21A4C4;
+  --green: #6EB245;
+  --bg: #fff;
+  --text: #333;
+  --border: rgba(0,0,0,.2);
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-60: 60;
+}
+
+html {
+  font-family: var(--font);
+  font-weight: var(--normal);
+  color: var(--text);
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  line-height: 1.4;
+  letter-spacing: 0.011em;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+:focus {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+}
+
+/*------------------------------------*  #HEADINGS
+\*------------------------------------*/
+/**
+ * Simple default styles for headings 1 through 6.
+ */
+/*------------------------------------*  #PARAGRAPHS
+\*------------------------------------*/
+/**
+ * Basic styling for paragraphs.
+ */
+p {
+  line-height: 1.4;
+}
+
+/*------------------------------------*  #LINKS
+\*------------------------------------*/
+/**
+ * Default styles for simple hyperlinks.
+ */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  text-shadow: 0px 0px var(--border);
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+/*------------------------------------*  #LISTS
+\*------------------------------------*/
+/**
+ * Remove trailing margins from nested lists.
+ */
+ol, ul {
+  list-style: none;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+/**
+ * Visually offset definition titles from their definitions.
+ */
+dt {
+  font-weight: 700;
+}
+
+/*------------------------------------*    #IMAGES
+\*------------------------------------*/
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+img {
+  max-width: 100%;
+  /* [1] */
+  font-style: italic;
+  /* [2] */
+  vertical-align: middle;
+  /* [3] */
+}
+
+/**
+ * 1. If a `width` and/or `height` attribute have been explicitly defined, let’s
+ *    not make the image fluid.
+ */
+img[width],
+img[height] {
+  /* [1] */
+  max-width: none;
+}
+
+svg {
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+/*------------------------------------*  #QUOTES
+\*------------------------------------*/
+/**
+ * Basic styling for quoted text.
+ */
+q {
+  quotes: "‘" "’";
+}
+
+q:before {
+  content: open-quote;
+}
+
+q:after {
+  content: close-quote;
+}
+
+blockquote {
+  quotes: "“" "”";
+}
+
+/* end of reset */
+/* header css */
+.wrapper {
+  width: 86%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* title */
+.title {
+  color: var(--pink);
+  font-family: "cocon";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 70px;
+  max-width: 701px;
+  margin-top: 1em;
+}
+
+.stroke-text {
+  font-size: 48px;
+  font-family: sans-serif;
+  max-width: 600px;
+  margin-top: 0.8em;
+  line-height: 70px;
+  text-shadow: 1px 1px 0 var(--pink), -1px -1px 0 var(--pink), 1px -1px 0 var(--pink), -1px 1px 0 var(--pink), 1px 1px 0 var(--pink);
+}
+
+@supports (-webkit-text-stroke: 1px black) {
+  .stroke-text {
+    -webkit-text-stroke: 1px var(--pink);
+    -webkit-text-fill-color: white;
+  }
+}
+/* flex csss */
+.flex {
+  display: flex;
+}
+
+.btn {
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 11px 11px 11px 0px;
+}
+
+.btn--primary {
+  color: white;
+  background: var(--green);
+}
+
+.btn--large {
+  padding: 1em 2em;
+}
+
+.header {
+  position: relative;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  width: 86%;
+  padding: 1em;
+  z-index: var(--z-60);
+}
+
+.navigation, .nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items {
+  margin-left: 2em;
+}
+
+.nav-items__link {
+  display: inline-block;
+  padding: 6px 2em;
+  color: var(--text);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-bg {
+  background-image: url(/assets/img/hero/BQ-Safewash-baby-blurred-out-2-1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0px 4px 30px #FE96C6);
+  opacity: 0.5;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  height: 100%;
+}
+
+.hero-inner {
+  background-image: url(/assets/img/hero/BQ-Safewash-baby-4-hero-1.webp);
+  background-repeat: no-repeat;
+  background-size: 82%;
+  background-position: right -98px;
+  position: absolute;
+  top: 7em;
+  left: 0px;
+  right: 0px;
+  margin-left: calc(100% - 90%);
+  height: 100%;
+  max-width: 1440px;
+}
+
+.hero-carousel {
+  position: relative;
+  top: 0;
+}
+
+.hero-content .btn {
+  margin-top: 1.5em;
+}/*# sourceMappingURL=style.css.map */

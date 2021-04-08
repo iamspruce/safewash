@@ -1,0 +1,13 @@
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 11px 11px 11px 0px;
+}
+.btn--primary {
+    color: white;
+    background: var(--green);
+}
+.btn--large {
+    padding:1em 2em;
+}

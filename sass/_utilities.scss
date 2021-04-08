@@ -1,0 +1,40 @@
+.wrapper {
+    width: 86%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* title */
+.title {
+    color: var(--pink);
+    font-family: 'cocon';
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 70px;
+    max-width: 701px;
+    margin-top: 1em;
+}
+.stroke-text {
+    font-size: 48px;
+    font-family: sans-serif;
+    max-width: 600px;
+    margin-top: .8em;
+    line-height: 70px;
+    text-shadow:
+     1px  1px 0 var(--pink),
+    -1px -1px 0 var(--pink),  
+     1px -1px 0 var(--pink),
+    -1px  1px 0 var(--pink),
+     1px  1px 0 var(--pink);
+}
+
+@supports (-webkit-text-stroke: 1px black) {
+    .stroke-text {
+    -webkit-text-stroke: 1px var(--pink);
+    -webkit-text-fill-color: white;
+  }
+}
+/* flex csss */
+.flex {
+    display: flex;
+}
