@@ -211,6 +211,10 @@ blockquote {
   margin-right: auto;
 }
 
+main {
+  margin-top: 640px;
+}
+
 /* title */
 .title {
   color: var(--pink);
@@ -226,7 +230,7 @@ blockquote {
   font-size: 48px;
   font-family: sans-serif;
   max-width: 600px;
-  margin-top: 0.8em;
+  margin-top: 0.5em;
   line-height: 70px;
   text-shadow: 1px 1px 0 var(--pink), -1px -1px 0 var(--pink), 1px -1px 0 var(--pink), -1px 1px 0 var(--pink), 1px 1px 0 var(--pink);
 }
@@ -286,41 +290,111 @@ blockquote {
 }
 
 .hero {
-  position: relative;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 100vh;
+  max-height: 640px;
 }
 
 .hero-bg {
-  background-image: url(/assets/img/hero/BQ-Safewash-baby-blurred-out-2-1.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(213.01deg, #FFFFFF 4.13%, rgba(254, 150, 198, 0.5) 80.31%);
   filter: drop-shadow(0px 4px 30px #FE96C6);
   opacity: 0.5;
   transform: matrix(-1, 0, 0, 1, 0, 0);
   height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
 }
 
 .hero-inner {
-  background-image: url(/assets/img/hero/BQ-Safewash-baby-4-hero-1.webp);
-  background-repeat: no-repeat;
-  background-size: 82%;
-  background-position: right -98px;
   position: absolute;
-  top: 7em;
+  top: 0px;
   left: 0px;
   right: 0px;
-  margin-left: calc(100% - 90%);
-  height: 100%;
+  bottom: 0px;
+  z-index: 2;
   max-width: 1440px;
+  margin-left: 9%;
+  background-image: url(/assets/img/hero/BQ-Safewash-baby-4-hero-1.webp);
+  background-repeat: no-repeat;
+  background-position-x: calc(100% + 30px);
 }
 
-.hero-carousel {
-  position: relative;
-  top: 0;
+.hero-content {
+  margin-top: 8.5em;
 }
 
 .hero-content .btn {
   margin-top: 1.5em;
+}
+
+/* hero slider */
+.slider-buttons {
+  margin-top: 1.8em;
+  display: flex;
+}
+
+.slider-btn {
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid var(--pink);
+  margin-right: 6px;
+}
+
+.hero-carousel {
+  display: flex;
+  position: relative;
+}
+
+/* activate sliders */
+#hero-1:checked ~ .hero-1 {
+  left: 0;
+}
+
+#hero-1:checked ~ .hero-2,
+#hero-1:checked ~ .hero-3,
+#hero-1:checked ~ .hero-4 {
+  left: -99999px;
+}
+
+#hero-2:checked ~ .hero-2 {
+  left: 0;
+  display: block;
+}
+
+#hero-2:checked ~ .hero-1,
+#hero-2:checked ~ .hero-3,
+#hero-2:checked ~ .hero-4 {
+  left: -99999px;
+}
+
+#hero-3:checked ~ .hero-3 {
+  left: 0;
+  display: block;
+}
+
+#hero-3:checked ~ .hero-1,
+#hero-3:checked ~ .hero-2,
+#hero-3:checked ~ .hero-4 {
+  left: -99999px;
+}
+
+#hero-4:checked ~ .hero-4 {
+  left: 0;
+  display: block;
+}
+
+#hero-4:checked ~ .hero-1,
+#hero-4:checked ~ .hero-3,
+#hero-4:checked ~ .hero-2 {
+  left: -99999px;
 }/*# sourceMappingURL=style.css.map */

@@ -4,6 +4,9 @@
     margin-left: auto;
     margin-right: auto;
 }
+main {
+    margin-top: 640px;
+}
 /* title */
 .title {
     color: var(--pink);
@@ -18,7 +21,7 @@
     font-size: 48px;
     font-family: sans-serif;
     max-width: 600px;
-    margin-top: .8em;
+    margin-top: .5em;
     line-height: 70px;
     text-shadow:
      1px  1px 0 var(--pink),
