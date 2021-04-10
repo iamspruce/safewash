@@ -205,14 +205,10 @@ blockquote {
 /* end of reset */
 /* header css */
 .wrapper {
-  width: 86%;
+  width: 93%;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-}
-
-main {
-  margin-top: 640px;
 }
 
 /* title */
@@ -265,16 +261,30 @@ main {
 .header {
   position: relative;
 }
-
-.navigation {
+.header::after {
+  content: "";
   position: absolute;
   top: 0;
-  width: 86%;
-  padding: 1em;
-  z-index: var(--z-60);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(213.01deg, #ffffff 4.13%, rgba(254, 150, 198, 0.5) 80.31%);
+  filter: drop-shadow(0px 4px 3px #fe96c6);
+  opacity: 0.5;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.header .wrapper,
+.header .hero-carousel {
+  position: relative;
+  z-index: 2;
 }
 
-.navigation, .nav-items {
+.navigation {
+  padding: 1em;
+}
+
+.navigation,
+.nav-items {
   display: flex;
   align-items: center;
 }
@@ -290,43 +300,32 @@ main {
 }
 
 .hero {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100vh;
-  max-height: 640px;
+  margin-right: 0px;
 }
 
-.hero-bg {
-  background-image: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(213.01deg, #FFFFFF 4.13%, rgba(254, 150, 198, 0.5) 80.31%);
-  filter: drop-shadow(0px 4px 30px #FE96C6);
-  opacity: 0.5;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+@media (min-width: 1440px) {
+  .hero {
+    margin-right: auto;
+  }
 }
-
-.hero-inner {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 2;
-  max-width: 1440px;
-  margin-left: 9%;
+.hero-1 {
   background-image: url(/assets/img/hero/BQ-Safewash-baby-4-hero-1.webp);
   background-repeat: no-repeat;
-  background-position-x: calc(100% + 30px);
+  background-position: calc(100% + 30px) -126px;
+}
+
+@media (max-width: 676px) {
+  .hero {
+    background-image: none !important;
+  }
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
-  margin-top: 8.5em;
+  margin: 0.5em 0;
 }
 
 .hero-content .btn {
@@ -335,7 +334,7 @@ main {
 
 /* hero slider */
 .slider-buttons {
-  margin-top: 1.8em;
+  margin: 1.8em 0;
   display: flex;
 }
 
@@ -352,7 +351,6 @@ main {
 
 .hero-carousel {
   display: flex;
-  position: relative;
 }
 
 /* activate sliders */
