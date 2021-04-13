@@ -1,91 +1,128 @@
 .hero {
-    margin-right: 0px;
+  margin-right: 0px;
 }
-@media (min-width: 1440px) {
-    .hero {
-        margin-right: auto;
-    }  
-}
- .hero-1 {
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%),
+      linear-gradient(213.01deg, #ffffff 4.13%, rgba(254, 150, 198, 0.5) 80.31%);
+    filter: drop-shadow(0px 4px 3px #fe96c6);
+    /* opacity: 0.5; */
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(/assets/img/hero/BQ-Safewash-baby-4-hero-1.webp);
     background-repeat: no-repeat;
-    background-position: calc(100% + 30px) -126px; 
+    background-size: 45em;
+    background-position: calc(100% + 30px) 0px;
+  }
 }
-@media (max-width: 676px) {
-    .hero {
-        background-image: none!important;
-    }  
+@media (min-width: 1440px) {
+  .hero {
+    margin-right: auto;
+  }
+}
+.hero-1 {
+}
+@media (max-width: 731px) {
+  .hero-bg::after {
+    background-image: none !important;
+  }
 }
 
-.hero-inner {    
-    position: relative;
-    z-index: 2;    
+.hero-inner {
+  position: relative;
+  z-index: 3;
 }
 .hero-content {
-    margin: .5em 0;
+  margin: 2em 0 4em 0;
 }
 
 .hero-content {
-
-    .btn {
-        margin-top: 1.5em;
-    }
+  .btn {
+    margin-top: 1.5em;
+  }
 }
- 
+
 /* hero slider */
 .slider-buttons {
-    margin: 1.8em 0;
-    display: flex;
+  margin: 1.8em 0;
+  display: flex;
 }
 .slider-btn {
-    cursor: pointer;
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    background-color: white;
-    border-radius: 50%;
-    border: 1px solid var(--pink);
-    margin-right: 6px;
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid var(--pink);
+  box-shadow: 0px 2px 4px rgba($color: #000000, $alpha: .1);
+
+  margin-right: 6px;
 }
 .hero-carousel {
-    display: flex;
+  display: flex;
 }
 /* activate sliders */
 #hero-1:checked ~ .hero-1 {
-    left: 0;
+  left: 0;
 }
 #hero-1:checked ~ .hero-2,
 #hero-1:checked ~ .hero-3,
 #hero-1:checked ~ .hero-4 {
-    left: -99999px;
+  left: -99999px;
 }
 #hero-2:checked ~ .hero-2 {
-    left: 0;
-    display: block;
+  left: 0;
+  display: block;
 }
 #hero-2:checked ~ .hero-1,
 #hero-2:checked ~ .hero-3,
-#hero-2:checked ~ .hero-4
- {
-    left: -99999px;
+#hero-2:checked ~ .hero-4 {
+  left: -99999px;
 }
 #hero-3:checked ~ .hero-3 {
-    left: 0;
-    display: block;
+  left: 0;
+  display: block;
 }
 #hero-3:checked ~ .hero-1,
 #hero-3:checked ~ .hero-2,
-#hero-3:checked ~ .hero-4
- {
-    left: -99999px;
+#hero-3:checked ~ .hero-4 {
+  left: -99999px;
 }
 #hero-4:checked ~ .hero-4 {
-    left: 0;
-    display: block;
+  left: 0;
+  display: block;
 }
 #hero-4:checked ~ .hero-1,
 #hero-4:checked ~ .hero-3,
-#hero-4:checked ~ .hero-2
- {
-    left: -99999px;
+#hero-4:checked ~ .hero-2 {
+  left: -99999px;
 }

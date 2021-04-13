@@ -55,8 +55,10 @@
       --font:'Cocon','Open Sans';
       --font-size: 15px;
       --pink: #FE96C6;
+      --purple: #9d3e89;
       --blue:  #21A4C4;
       --green: #6EB245;
+      --pale-greeb: #02998a;
       --bg: #fff;
       --text: #333;
       --border: rgba(0,0,0,.2);
@@ -69,7 +71,7 @@
      }
   
   html {
-      font-family: var(--font);
+      font-family: Arial, Helvetica, sans-serif;
       font-weight: var(--normal);
       color: var(--text);
       font-size: 16px;
@@ -83,7 +85,7 @@
     }
     
     :focus {
-      box-shadow: 0 0 3px rgba(0,0,0,.75);
+      border: 1px dashed var(--pink);
     }
     
     /*------------------------------------*  #HEADINGS

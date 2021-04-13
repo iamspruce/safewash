@@ -1,10 +1,12 @@
 .wrapper {
-    width: 93%;
+    width: 96%;
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
 }
-
+.text-center {
+    text-align: center;
+}
 /* title */
 .title {
     color: var(--pink);
@@ -35,7 +37,36 @@
     -webkit-text-fill-color: white;
   }
 }
-/* flex csss */
+/* flex css */
 .flex {
     display: flex;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* colors */
+.color-purple {
+    color: var(--purple);
+}
+.color-blue {
+    color: var(--blue);
+}
+.color-green {
+    color: var(--green);
+}
+.color-pale-green {
+    color: var(--pale-green);
+}
+
+.about-img {
+    position: relative;
+
+    .img-wrap {
+        position: absolute;
+        bottom: -13px;
+        left: -16px;
+        transform: rotate(17.96deg);
+    }
 }
