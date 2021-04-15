@@ -40,7 +40,7 @@
     background-image: url(/assets/img/hero/BQ-Safewash-baby-4-hero-1.webp);
     background-repeat: no-repeat;
     background-size: 45em;
-    background-position: calc(100% + 30px) 0px;
+    background-position: calc(100% + 30px) 59px;
   }
 }
 @media (min-width: 1440px) {
@@ -48,11 +48,18 @@
     margin-right: auto;
   }
 }
-.hero-1 {
-}
 @media (max-width: 731px) {
   .hero-bg::after {
     background-image: none !important;
+  }
+  .title {
+    margin-top: 0px;
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .stroke-text {
+    font-size: 22px;
+    line-height: 34px;
   }
 }
 

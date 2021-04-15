@@ -29,6 +29,7 @@
      1px -1px 0 var(--pink),
     -1px  1px 0 var(--pink),
      1px  1px 0 var(--pink);
+     letter-spacing: 2px;
 }
 
 @supports (-webkit-text-stroke: 1px black) {
@@ -88,6 +89,7 @@
         height: 100%;
         border-width: 4px;
         border-style: solid;
+        border-radius: 11px;
         transition: all .3s cubic-bezier(0.23, 1, 0.320, 1);
     }
     &::after {

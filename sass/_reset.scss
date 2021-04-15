@@ -15,7 +15,13 @@
   }
     html,body {
       height: 100%;
-      width: 100%;
+      width: 100vw;
+      overflow-x: hidden;
+    }
+    @media screen and (prefers-reduced-motion: no-preference) {
+      html {
+        scroll-behavior: smooth;
+      }
     }
   
   /**
@@ -26,7 +32,9 @@
   dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0; }
-  
+  h1,.h1 {
+    font-size: 26px;
+  }
   /*------------------------------------*  #SHARED
   \*------------------------------------*/
   /**
@@ -75,7 +83,7 @@
       font-family: Arial, Helvetica, sans-serif;
       font-weight: var(--normal);
       color: var(--text);
-      font-size: 16px;
+      font-size: 14px;
       transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
       line-height: 1.4;
       letter-spacing: 0.011em;
@@ -115,6 +123,14 @@
       text-decoration: none;
       color: var(--primary-color);
       text-shadow: 0px 0px var(--border);
+    }
+    .link {
+      display: inline-block;
+      padding: 6px;
+    }
+    a.link:hover {
+      text-decoration: underline;
+      color: var(--pink);
     }
   
       button {
@@ -178,16 +194,20 @@
      * Basic styling for quoted text.
      */
     q {
-      quotes: "‘" "’"; }
+      quotes: "‘‘" ""; 
+      margin-top: .6em;
+    }
       q:before {
-        content: open-quote; }
-      q:after {
-        content: close-quote; }
+        content: open-quote;
+        color: var(--pink);
+        font-size: 32px;
+        font-family: 'cocon';
+      }
+      
     
     blockquote {
       quotes: "“" "”"; }
   
-  /* end of reset */
-  
-  /* header css */
-  
+  [hidden] {
+    display: none;
+  }

@@ -16,21 +16,26 @@
             <img src="/assets/img/logo.webp" alt="safe wash homepage" width="57px" height="60px" />
           </a>
           <nav>
-            <button class="nav-btn">
-                <img src="/assets/img/Group.svg" alt="" width="26px" height="26px">
+            <button class="nav-btn js-nav-open">
+                <svg width="26px" height="26px">
+                    <use xlink:href="#icon-menu"></use>
+                </svg>
+                <svg width="26px" height="26px" hidden>
+                    <use xlink:href="#icon-close"></use>
+                </svg>
             </button>
             <ul class="nav-items">
               <li class="nav-items__list">
-                <a href="#0" class="nav-items__link"> Home </a>
+                <a href="/" class="nav-items__link"> Home </a>
               </li>
               <li class="nav-items__list">
-                <a href="#0" class="nav-items__link"> About </a>
+                <a href="#about" class="nav-items__link"> About </a>
               </li>
               <li class="nav-items__list">
-                <a href="#0" class="nav-items__link"> Become A Distributor </a>
+                <a href="#distributor" class="nav-items__link"> Become A Distributor </a>
               </li>
               <li class="nav-items__list">
-                <a href="#0" class="nav-items__link"> Contact </a>
+                <a href="#contact" class="nav-items__link"> Contact </a>
               </li>
             </ul>
           </nav>
@@ -150,7 +155,7 @@
         <div class="section--blur section-baby-blur"></div>
            <div class="section--inner wrapper">
                <div class="section--head text-center">
-                <h2 class="color-blue">
+                <h2 class="color-blue h1">
                     Notable Features
                 </h2>
                 <p>
@@ -210,11 +215,11 @@
                </div>
            </div>
        </section>
-       <section class="section section--pad section--btm-reset">
+       <section class="section section--pad section--btm-reset" id="about">
            <div class="section--inner section-inner-wrap">
                <div class="section-flex grid-gap-16 flex-center">
                    <div class="section-flex-col about-block">
-                    <h3>
+                    <h3 class="h1 color-purple">
                         About Us
                     </h3>
                     <p>
@@ -233,19 +238,19 @@
                </div>
            </div>
        </section>
-       <section class="section section--pad section--btm-reset">
+       <section class="section section--pad section--btm-reset" id="distributor">
            <div class="section-inner text-center">
             <div class="section--head">
-                <h2 class="color-blue h1">
+                <h4 class="color-blue h1">
                     See Our Top Distributors
-                </h2>
+                </h4>
                 <p>
                     We use our Knowledge and expertise to provide the most efficient, effective and environmentally friendly cleaning possible
                 </p>
                </div>
                <div class="card-grid">
                    <div class="card">
-                       <div class="card-img card-img-testimony color-green">
+                       <div class="card-img color-green">
                         <span class="card-img-offset">
                         <img src="/assets/img/kubura.webp" alt="">
                         </span>
@@ -266,7 +271,7 @@
                        </div>
                    </div>
                    <div class="card">
-                       <div class="card-img card-img-testimony color-blue">
+                       <div class="card-img color-blue">
                         <span class="card-img-offset">
                         <img src="/assets/img/ramat.webp" alt="">
                         </span>
@@ -287,7 +292,7 @@
                        </div>
                    </div>
                    <div class="card">
-                       <div class="card-img card-img-testimony color-purple">
+                       <div class="card-img color-purple">
                            <span class="card-img-offset">
                         <img src="/assets/img/mark.webp" alt="">
                            </span>
@@ -318,7 +323,7 @@
                </div>
            </div>
        </section>
-       <section class="section section--pad">
+       <section class="section section--pad" id="contact">
         <div class="section--blur section-soap-blur"></div>
            <div class="section--inner wrapper">
                <div class="section-flex flex-center grid-gap-16">
@@ -328,9 +333,9 @@
                 </div>
                 <div class="section-flex-col">
                  <div class="about-block width-reset">
-                    <h3>
+                    <h5 class="h1 color-purple">
                         Reach Out to Us
-                    </h3>
+                    </h5>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, voluptas porro, quae optio voluptates natus debitis culpa nostrum minima velit aspernatur animi, voluptatem quod libero obcaecati! Eius, amet id!
                     </p>
@@ -346,9 +351,9 @@
        <section class="section section--pad">
         <div class="section-inner">
          <div class="section--head text-center">
-             <h2 class="color-blue h1">
+             <h6 class="color-blue h1">
                  Read Our Testimonies
-             </h2>
+             </h6>
              <p>
                  We use our Knowledge and expertise to provide the most efficient, effective and environmentally friendly cleaning possible
              </p>
@@ -370,7 +375,7 @@
                         </q>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-testimony">
                     <div class="card-img card-img-testimony color-blue">
                      <span class="card-img-offset">
                      <img src="/assets/img/ramat.webp" alt="">
@@ -378,7 +383,7 @@
                     </div>
                     <div class="card-content card-content-testimony">
                         <strong>
-                            Kudirat Bakere
+                            Kudirat Bakere <br>
                             <small>A Nursing Mother</small>
                         </strong>
                         <q>
@@ -404,7 +409,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section--video">
+            <div class="section--video text-center">
              <div class="vid-wrapper">
                  <img src="/assets/img/Rectangle-37.webp" alt="">
              </div>
@@ -413,7 +418,124 @@
     </section>
     </main>
     <footer>
-
+        <div class="footer-wrapper wrapper">
+            <div class="footer-flex">
+                <div class="footer-logo">
+                    <img src="/assets/img/BQ-Dark-Big.webp" alt="" >
+                </div>
+                <ul class="footer-list">
+                    <strong class="footer-title">
+                        Customer Service
+                    </strong> <br><br>
+                    <li>
+                        <a href="#0" class="link">
+                            Become A Distributor
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0" class="link">
+                            Ordering & payment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#top" class="link">
+                            Returns
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#top" class="link">
+                            FAQS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#top" class="link">
+                            Go To Top
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <strong class="footer-title">
+                        Customer Service
+                    </strong> <br><br>
+                    <li>
+                        <a href="#0" class="link">
+                            About safewash
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0" class="link">
+                            Work with us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#top" class="link">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#top" class="link">
+                            Terms And Conditions
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <strong class="footer-title">
+                        Contact us
+                    </strong> <br><br>
+                    <li>
+                        <span class="link">
+                            +2348137781578
+                        </span>
+                    </li>
+                    <li>
+                        <span class="link">
+                            safewash@gmail.com
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#0" class="link">
+                            <svg width="26px" height="26px">
+                                <use xlink:href="#icon-facebook"></use>
+                            </svg>
+                         </a>
+                        <a href="#0" class="link">
+                            <svg width="26px" height="26px">
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                         </a>
+                        <a href="#0" class="link">
+                            <svg width="26px" height="26px">
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                         </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-end text-center">
+            &copy bqsafewash 2021
+        </div>
     </footer>
   </body>
+  <svg width="0" height="0" style="display: none" xmlns="http://www.w3.org/2000/">
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <path d="M11.997 7.9983C9.79351 7.9983 7.99529 9.79651 7.99529 12C7.99529 14.2035 9.79351 16.0017 11.997 16.0017C14.2005 16.0017 15.9987 14.2035 15.9987 12C15.9987 9.79651 14.2005 7.9983 11.997 7.9983ZM23.9991 12C23.9991 10.3429 24.0141 8.70077 23.9211 7.04665C23.828 5.12536 23.3897 3.4202 21.9847 2.01525C20.5768 0.607302 18.8746 0.172008 16.9533 0.0789456C15.2962 -0.0141173 13.6541 0.000892936 12 0.000892936C10.3429 0.000892936 8.70077 -0.0141173 7.04665 0.0789456C5.12536 0.172008 3.4202 0.610305 2.01525 2.01525C0.607303 3.42321 0.172008 5.12536 0.0789456 7.04665C-0.0141172 8.70377 0.000892936 10.3459 0.000892936 12C0.000892936 13.6541 -0.0141172 15.2992 0.0789456 16.9533C0.172008 18.8746 0.610305 20.5798 2.01525 21.9847C3.42321 23.3927 5.12536 23.828 7.04665 23.9211C8.70377 24.0141 10.3459 23.9991 12 23.9991C13.6571 23.9991 15.2992 24.0141 16.9533 23.9211C18.8746 23.828 20.5798 23.3897 21.9847 21.9847C23.3927 20.5768 23.828 18.8746 23.9211 16.9533C24.0171 15.2992 23.9991 13.6571 23.9991 12ZM11.997 18.1572C8.58969 18.1572 5.83984 15.4073 5.83984 12C5.83984 8.5927 8.58969 5.84284 11.997 5.84284C15.4043 5.84284 18.1542 8.5927 18.1542 12C18.1542 15.4073 15.4043 18.1572 11.997 18.1572ZM18.4063 7.02864C17.6108 7.02864 16.9684 6.38621 16.9684 5.59067C16.9684 4.79513 17.6108 4.1527 18.4063 4.1527C19.2019 4.1527 19.8443 4.79513 19.8443 5.59067C19.8445 5.77957 19.8075 5.96667 19.7353 6.14124C19.6631 6.31581 19.5572 6.47442 19.4237 6.608C19.2901 6.74157 19.1315 6.84748 18.9569 6.91967C18.7823 6.99185 18.5952 7.02888 18.4063 7.02864Z" fill="#483D3F"/>
+    </symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24">
+        <path d="M23.0405 0H0.960488C0.429488 0 0.000488281 0.429 0.000488281 0.96V23.04C0.000488281 23.571 0.429488 24 0.960488 24H23.0405C23.5715 24 24.0005 23.571 24.0005 23.04V0.96C24.0005 0.429 23.5715 0 23.0405 0ZM20.2685 7.005H18.3515C16.8485 7.005 16.5575 7.719 16.5575 8.769V11.082H20.1455L19.6775 14.703H16.5575V24H12.8165V14.706H9.68749V11.082H12.8165V8.412C12.8165 5.313 14.7095 3.624 17.4755 3.624C18.8015 3.624 19.9385 3.723 20.2715 3.768V7.005H20.2685Z" fill="#483D3F"/>
+    </symbol>
+    <symbol id="icon-twitter" viewBox="0 0 24 24">
+        <path d="M12.0005 0C5.3737 0 0.000488281 5.37321 0.000488281 12C0.000488281 18.6268 5.3737 24 12.0005 24C18.6273 24 24.0005 18.6268 24.0005 12C24.0005 5.37321 18.6273 0 12.0005 0ZM17.7675 9.04554C17.7755 9.17143 17.7755 9.30268 17.7755 9.43125C17.7755 13.3634 14.7808 17.8929 9.30852 17.8929C7.62102 17.8929 6.05674 17.4027 4.73888 16.5589C4.97995 16.5857 5.21031 16.5964 5.45674 16.5964C6.8496 16.5964 8.12995 16.125 9.15049 15.3268C7.84335 15.3 6.74513 14.4429 6.37013 13.2643C6.82817 13.3313 7.24067 13.3313 7.7121 13.2107C7.03904 13.074 6.43408 12.7084 6 12.1762C5.56591 11.644 5.32947 10.9779 5.33085 10.2911V10.2536C5.7246 10.4759 6.18799 10.6125 6.67281 10.6313C6.26524 10.3596 5.931 9.99164 5.69971 9.5599C5.46843 9.12817 5.34725 8.64603 5.34692 8.15625C5.34692 7.60179 5.49156 7.09554 5.75138 6.65625C6.49844 7.5759 7.43066 8.32806 8.48745 8.86384C9.54423 9.39961 10.7019 9.70702 11.8853 9.76607C11.4648 7.74375 12.9755 6.10714 14.7916 6.10714C15.6487 6.10714 16.4201 6.46607 16.9639 7.04464C17.6362 6.91875 18.2791 6.66696 18.8523 6.32946C18.63 7.01786 18.1639 7.59911 17.5451 7.96607C18.1451 7.90179 18.7237 7.73571 19.2594 7.50268C18.855 8.09732 18.3487 8.625 17.7675 9.04554Z" fill="#483D3F"/>
+
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M20 13.9089C20 14.4973 19.554 14.9733 19.005 14.9733H10.995C10.7311 14.9733 10.478 14.8612 10.2914 14.6616C10.1048 14.462 10 14.1912 10 13.9089C10 13.6266 10.1048 13.3559 10.2914 13.1562C10.478 12.9566 10.7311 12.8445 10.995 12.8445H19.005C19.555 12.8445 20 13.3205 20 13.9089Z" fill="#000100"/>
+<path d="M20 7.48899C20 8.07738 19.554 8.55343 19.005 8.55343H0.995C0.731109 8.55343 0.478028 8.44128 0.291429 8.24166C0.10483 8.04204 0 7.7713 0 7.48899C0 7.20669 0.10483 6.93595 0.291429 6.73633C0.478028 6.53671 0.731109 6.42456 0.995 6.42456H19.005C19.555 6.42456 20 6.90168 20 7.48899Z" fill="#000100"/>
+<path d="M19.005 2.13326C19.2689 2.13326 19.522 2.02111 19.7086 1.82149C19.8952 1.62187 20 1.35113 20 1.06883C20 0.786522 19.8952 0.515779 19.7086 0.316159C19.522 0.11654 19.2689 0.00439454 19.005 0.00439453H6.995C6.86433 0.00439453 6.73495 0.0319269 6.61423 0.0854196C6.49351 0.138912 6.38382 0.217318 6.29143 0.316159C6.19903 0.415001 6.12574 0.532344 6.07574 0.661486C6.02574 0.790629 6 0.929043 6 1.06883C6 1.20861 6.02574 1.34702 6.07574 1.47617C6.12574 1.60531 6.19903 1.72265 6.29143 1.82149C6.38382 1.92034 6.49351 1.99874 6.61423 2.05223C6.73495 2.10573 6.86433 2.13326 6.995 2.13326H19.005Z" fill="#000100"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+        <path d="M14.5092 0.773716C14.9179 1.16281 14.9416 1.8085 14.5636 2.21579L2.16395 15.5771C1.98226 15.7729 1.73012 15.8865 1.46297 15.8929C1.19583 15.8993 0.935568 15.7981 0.739453 15.6114C0.543338 15.4247 0.427429 15.1679 0.417225 14.8974C0.407022 14.627 0.503359 14.3651 0.685044 14.1693L13.0847 0.807987C13.4634 0.399951 14.1012 0.385331 14.5092 0.773716Z" fill="#000100"/>
+<path d="M0.878263 0.676685C1.2817 0.309194 1.90928 0.350271 2.27999 0.766833L14.4412 14.4322C14.6194 14.6325 14.7134 14.8945 14.7025 15.1608C14.6916 15.4271 14.5768 15.6757 14.3832 15.852C14.1896 16.0283 13.9332 16.1179 13.6703 16.101C13.4074 16.0841 13.1596 15.9621 12.9815 15.7619L0.820273 2.09648C0.448887 1.67916 0.475556 1.04351 0.878263 0.676685Z" fill="#000100"/>
+    </symbol>
+    </svg>
 </html>
