@@ -71,3 +71,38 @@
         transform: rotate(17.96deg);
     }
 }
+
+.vid-wrapper {
+    display: inline-block;
+    position: relative;
+    transition: all .3s cubic-bezier(0.23, 1, 0.320, 1);
+
+
+    &::after,&::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-width: 4px;
+        border-style: solid;
+        transition: all .3s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    &::after {
+        border-color: var(--green);
+        transform: rotate(-2.36deg);
+    }
+    &::before {
+        border-color: var(--pink);
+        transform: rotate(2.36deg);
+    }
+
+    &:hover::after {
+        transform: rotate(2.36deg);
+    }
+    &:hover::before {
+        transform: rotate(-2.36deg);
+    }
+}
