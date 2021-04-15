@@ -17,3 +17,13 @@
 .btn--large {
     padding:1em 2em;
 }
+.btn.btn--round {
+    border-radius: 11px;
+}
+.btn--small {
+    padding: calc(14px/2) 1em;
+    color: #fff;
+}
+.btn--blue {
+    background: var(--blue);
+}
