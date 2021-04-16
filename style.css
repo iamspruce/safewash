@@ -632,16 +632,18 @@ blockquote {
   bottom: 0px;
   z-index: 1;
   opacity: 0.5;
-  background-position: center;
-  background-size: cover;
 }
 
 .section-baby-blur {
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(131.41deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 15.33%, rgba(255, 210, 231, 0.9) 35.21%, rgba(254, 168, 208, 0.9) 51.11%, rgba(254, 166, 207, 0.9) 69.85%, rgba(255, 255, 255, 0.9) 98.24%, rgba(255, 255, 255, 0.9) 109.03%), url(/assets/img/baby-blured.webp);
+  background-position: center;
+  background-size: cover;
 }
 
 .section-soap-blur {
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(137.03deg, rgba(255, 255, 255, 0.95) 47.28%, rgba(254, 150, 198, 0.95) 152.37%), url(/assets/img/bq-safewash-only.webp);
+  background-position: center;
+  background-size: cover;
 }
 
 .section-flex {
