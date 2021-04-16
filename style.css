@@ -21,7 +21,6 @@ html {
 }
 
 html, body {
-  height: 100%;
   width: 100vw;
   overflow-x: hidden;
 }
@@ -62,6 +61,10 @@ button {
 
 textarea {
   resize: none;
+}
+
+button {
+  text-align: center;
 }
 
 /*------------------------------------*  #PAGE
@@ -409,8 +412,41 @@ blockquote {
     display: block;
   }
 
+  .header.active .wrapper {
+    position: static;
+  }
+
   .nav-items {
+    position: fixed;
+    z-index: 999;
+    top: -999px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background: pink;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0px;
+  }
+  .nav-items .nav-items__link {
+    padding: 1em;
+    font-size: 18px;
+  }
+
+  .header.active .nav-items {
+    top: 0px;
+  }
+
+  .header.active .js-nav-open {
+    position: fixed;
+    z-index: 9999;
+    right: 15px;
+  }
+  .header.active .js-nav-open .menu-open {
     display: none;
+  }
+  .header.active .js-nav-open .menu-close {
+    display: block;
   }
 
   .navigation {
